@@ -15,5 +15,5 @@
 
 ```Note: When you create a chain and deploy smart contract on chain it will create registrar.json file. This file contain address of smart contract. This address is used to call smart contract function by web3.js. Copy contract address and paste it on server.js file.  ```
 
-If you did everything correctly, then run server.js file
+If you did everything correctly, then run server.js file<br />
 **$ node server.js**
