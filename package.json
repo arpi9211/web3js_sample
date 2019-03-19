@@ -1,0 +1,23 @@
+{
+  "name": "web3js_trial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "abi-decoder": "^1.2.0",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "http-server": "^0.11.1",
+    "nodemon": "^1.18.9",
+    "path": "^0.12.7",
+    "solc": "^0.4.25",
+    "web3": "^0.19.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Web3 Simple Demo</title>
+    <script>
+        console.log("client side code running");
+        var xhr = new XMLHttpRequest();
+        var resp = "";
+        function onSetClick() {
+            console.log("Inside onSetClick()");
+            var value = document.getElementById("someValue").value;
+            console.log("Script " + value);
+            xhr.open('POST', '/setValue', true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send("buttonClicked=set&value=" + value);
+        }
+        function getValue() {
+            console.log("Inside getvalue");
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("value").innerHTML =
+                        this.responseText;
+                }
+            };
+            xhr.open('POST', '/setValue', true);
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body class="container">
+
+    <h3>Web3.js Example</h3>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="blockchain">
+            <h3> 1. Set the value in the blockchain</h3>
+            <div class="form-group form-inline">
+                <input type="text" class="text form-control" id="someValue" value="Siri">
+                <button class="btn btn-primary" onclick="onSetClick()">Set Value</button>
+            </div>
+            <h3> 2. Get the current value</h3>
+            <div class="form-group">
+                <div>
+                    current value is <span id="value">
+                    </span>
+                </div>
+                <button class="btn btn-primary" onclick="getValue()">Get Value</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
