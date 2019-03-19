@@ -14,3 +14,6 @@
     (Ex. $ populus deploy --chain chain_name contract_name --no-wait-for-sync)
 
 ```Note: When you create a chain and deploy smart contract on chain it will create registrar.json file. This file contain address of smart contract. This address is used to call smart contract function by web3.js. Copy contract address and paste it on server.js file.  ```
+
+If you did everything correctly, then run server.js file
+**$ node server.js**
