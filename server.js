@@ -76,17 +76,12 @@ app.post('/setValue', urlencodedParser, function (req, res) {
         });
 
     }
-
-    // if (req.body.buttonClicked === "get") 
     else {
         console.log("Inside getValue");
         console.log("should be in here for get");
         var value = sampleContractInstance.get.call();
         console.log("get value", value);
-        //res.writeHead(200, { 'Content-Type': 'text/html' });
         res.send(value);
-        //res.render(__dirname + "/index.html", { value: value });
-
     }
 });
 app.listen(3000);
