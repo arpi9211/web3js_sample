@@ -6,9 +6,9 @@
 	**$ populus chain new sample**<br />
 	Note: here sample is chain name
 2.	Initiate chain<br />
- 	**$ chains/sample /./init_chain.sh**
+ 	**$ chains/sample/./init_chain.sh**
 3.	Run the chain<br />
-	**$ chains/sample /./run_chain.sh**
+	**$ chains/sample/./run_chain.sh**
 4.	Deploy SampleStorage (contract name) contract to sample local chain<br />
     **$ populus deploy --chain sample SampleStorage --no-wait-for-sync**<br />
     (Ex. $ populus deploy --chain chain_name contract_name --no-wait-for-sync)
